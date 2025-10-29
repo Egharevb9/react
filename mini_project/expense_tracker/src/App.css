@@ -1,0 +1,55 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #f4f4f4;
+  margin: 0;
+  padding: 20px;
+}
+
+.container {
+  max-width: 700px;
+  margin: auto;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.form, .filters {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+input, select, button {
+  padding: 10px;
+  font-size: 1em;
+}
+
+.filters button.active {
+  background: #333;
+  color: white;
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+}
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  margin-bottom: 8px;
+  border-radius: 5px;
+  color: white;
+}
+
+.Food { background: #ff6b6b; }
+.Transport { background: #4ecdc4; }
+.Bills { background: #1a535c; }
+.Entertainment { background: #ff9f1c; }
+.Others { background: #6a4c93; }
+
+.stats {
+  margin-top: 20px;
+}
