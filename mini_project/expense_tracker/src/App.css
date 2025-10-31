@@ -1,17 +1,20 @@
 body {
   font-family: 'Segoe UI', sans-serif;
-  background: #f4f4f4;
+ 
+  align-content: center;
   margin: 0;
   padding: 20px;
 }
 
 .container {
-  max-width: 700px;
+  max-width: 850px;
+  max-height: 100vh;
   margin: auto;
-  background: white;
+   background: linear-gradient(135deg, purple, #cfcfcf, pink);
   padding: 20px;
   border-radius: 8px;
 }
+
 
 .form, .filters {
   display: flex;
@@ -23,10 +26,117 @@ body {
 input, select, button {
   padding: 10px;
   font-size: 1em;
+  
 }
 
 .filters button.active {
-  background: #333;
+  background: black;
+  color: white;
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+}
+.track{
+  text-align: center;
+}
+
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  margin-bottom: 8px;
+  border-radius: 5px;
+  color: black
+}
+.material-icons{
+  
+}
+.Food { background: #C4C3D0 }
+.Transport {
+  font-weight: 00;
+  font-size: large;
+   background:#C4C3D0;
+ }
+.Bills { background: #C4C3D0; }
+.Entertainment { background: #C4C3D0; }
+.Others { background:  rgb(218, 208, 218); }
+
+.stats {
+  display: flex;
+  margin-top: 20px;
+  background-color: whitesmoke;
+  border-radius: 4px;
+  padding: 20px;
+  font-weight: 400;
+  font-size: 20px;
+  font-family: 'Segoe UI', sans-serif;
+}
+/* .form button {
+  padding: 0.6rem 1rem;
+  /* background-color: #6200ea; */
+  /* color: black;
+  border: none;
+  border-radius: 6px;
+}   */
+
+/* body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+.container {
+  max-width: 700px;
+  max-height: 100vh;
+  margin: auto;
+   background: linear-gradient(135deg, purple, #cfcfcf, pink);
+  padding: 20px;
+  border-radius: 8px;
+}
+
+
+.tracker-container {
+  max-width: 800px;
+  margin: auto;
+  padding: 2rem;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 1rem;
+  background-color: black;
+}
+
+.form input, .form select {
+  margin: 0.5rem;
+  padding: 0.6rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.form button {
+  padding: 0.6rem 1rem;
+  background-color: #6200ea;
+  color: white;
+  border: none;
+  border-radius: 6px;
+} 
+
+/* .filters button {
+  margin: 0.3rem;
+  padding: 0.4rem 0.8rem;
+  border: none;
+  border-radius: 20px;
+  background-color: #eee;
+}
+
+.filters .active {
+  background-color: #ff69b4;
   color: white;
 }
 
@@ -38,18 +148,6 @@ input, select, button {
 .item {
   display: flex;
   justify-content: space-between;
-  padding: 10px;
-  margin-bottom: 8px;
-  border-radius: 5px;
-  color: white;
-}
-
-.Food { background: #ff6b6b; }
-.Transport { background: #4ecdc4; }
-.Bills { background: #1a535c; }
-.Entertainment { background: #ff9f1c; }
-.Others { background: #6a4c93; }
-
-.stats {
-  margin-top: 20px;
-}
+  align-items: center;
+  padding: 0.6rem;
+} */ */
