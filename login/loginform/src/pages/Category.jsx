@@ -2,6 +2,11 @@ import { useParams, Link } from 'react-router-dom';
 const dishes = {
   breakfast: ['Moi Moi', 'Akara', 'Pap'],
   lunch: ['Jollof Rice', 'Egusi Soup', 'Pounded Yam'],
+
+
+
+
+  
   dinner: ['Fried Rice', 'Ogbono Soup', 'Amala'],
   snacks: ['Puff Puff', 'Chin Chin', 'Meat Pie']
 };
