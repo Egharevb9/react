@@ -1,35 +1,66 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React from "react";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const relatedPosts = [
+    "Top 5 Naija Foods You Must Try",
+    "Fashion Trends in Nigeria 2025",
+    "How to Make Perfect Jollof Rice",
+    "Palm Wine: Traditions and Benefits",
+  ];
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <div className="min-h-screen bg-gray-100 p-6">
+      {/* Featured Image */}
+      <div className="w-full h-64 md:h-96 rounded-lg overflow-hidden mb-6">
+        <img
+          src="https://food.fnr.sndimg.com/content/dam/images/food/fullset/2023/11/21/FNK_Intsant-Pot-Texas-Style-Chili-Mac_H1.jpg.rend.hgtvcom.616.462.85.suffix/1700604212111.webp"
+          alt="Featured"
+          className="w-full h-full object-cover"
+        />
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
+
+      {/* Article Title + Metadata */}
+      <div className="mb-6">
+        <h1 className="text-3xl font-bold mb-2">The Ultimate Guide to Naija Cuisine</h1>
+        <p className="text-gray-600 text-sm">
+          By <span className="font-semibold">Esther</span> | Nov 11, 2025 | 8 min read
         </p>
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+
+      {/* Main Content + Sidebar */}
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        {/* Main content */}
+        <div className="lg:col-span-2 space-y-4 text-gray-800">
+          <p>
+            Nigerian cuisine is a vibrant mix of flavors, traditions, and culture. From spicy jollof rice
+            to sweet chin chin, every dish tells a story. In this guide, we explore the must-try foods,
+            how to prepare them, and the history behind each delicacy.
+          </p>
+          <p>
+            Suya, for example, is a spicy skewered meat that originated in Northern Nigeria. It's
+            popular street food and often enjoyed with onions and tomatoes. Jollof rice, on the other
+            hand, is a beloved party staple that has sparked friendly debates across West Africa!
+          </p>
+          <p>
+            Whether you're a foodie, a beginner cook, or just curious about Naija culture, this guide
+            will help you discover flavors that delight and stories that inspire.
+          </p>
+        </div>
+
+        {/* Sidebar */}
+        <div className="space-y-4 bg-white p-4 rounded-lg shadow-md">
+          <h2 className="text-xl font-semibold mb-2">Related Posts</h2>
+          <ul className="space-y-2">
+            {relatedPosts.map((post, index) => (
+              <li key={index} className="hover:text-green-700 cursor-pointer transition">
+                {post}
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </div>
+  );
 }
 
-export default App
+export default App;

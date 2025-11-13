@@ -1,35 +1,54 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+
+import { useState } from "react";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <nav className="bg-green-700 text-white shadow-md">
+      <div className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
+        {/* Logo */}
+        <h1 className="text-xl font-bold">NaijaMarket</h1>
+
+        {/* Navigation links (hidden on mobile) */}
+        <div className="hidden md:flex space-x-6">
+          <a href="#" className="hover:text-gray-200 transition">Home</a>
+          <a href="#" className="hover:text-gray-200 transition">Shop</a>
+          <a href="#" className="hover:text-gray-200 transition">Blog</a>
+          <a href="#" className="hover:text-gray-200 transition">Contact</a>
+        </div>
+
+        {/* Right side: cart + login + hamburger */}
+        <div className="flex items-center space-x-4">
+          {/* Cart icon using emoji */}
+          <span className="text-2xl cursor-pointer">🛒</span>
+
+          {/* Login button */}
+          <button className="bg-white text-green-700 px-3 py-1 rounded font-semibold hover:bg-gray-100 transition">
+            Login
+          </button>
+
+          {/* Hamburger menu (mobile only) */}
+          <button className="md:hidden text-2xl" onClick={() => setIsOpen(!isOpen)}>
+            {isOpen ? "" : "☰"}
+          </button>
+        </div>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+
+      {/* Mobile Menu */}
+      {isOpen && (
+        <div className="md:hidden bg-green-600 flex flex-col space-y-2 px-4 pb-4 transition-all duration-300">
+          <a href="#" className="hover:text-gray-200">Home</a>
+          <a href="#" className="hover:text-gray-200">Shop</a>
+          <a href="#" className="hover:text-gray-200">Blog</a>
+          <a href="#" className="hover:text-gray-200">Contact</a>
+        </div>
+      )}
+    </nav>
+  );
 }
 
-export default App
+export default App;
+
+
+
